@@ -49,24 +49,59 @@
             display: inline-block;
             background-color: #28a745;
             color: white;
-            padding: 12px 24px;
+            padding: 15px 30px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 22px;
             border-radius: 5px;
             margin-top: 20px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
         .botao-comprar:hover {
             background-color: #218838;
+            transform: scale(1.05);
+        }
+        .faq {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .faq h2 {
+            text-align: center;
+        }
+        .faq p {
+            font-weight: bold;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         footer {
-            margin-top: 20px;
-            padding: 10px;
+            margin-top: 40px;
+            padding: 15px;
             background: #ff7f27;
             color: white;
             text-align: center;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let fadeElements = document.querySelectorAll(".fade-in");
+            let observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -74,32 +109,47 @@
         <nav>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
                 <li><a href="#comprar">Comprar</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
     
     <div class="container">
-        <section id="sobre">
+        <section id="sobre" class="fade-in">
             <h2>Sobre o Guia</h2>
-            <p>Descubra os melhores restaurantes, bares, eventos e opções de lazer em Niterói e São Gonçalo. Nosso guia foi feito para quem ama explorar novas experiências gastronômicas e culturais.</p>
+            <p>Descubra os melhores restaurantes, bares, eventos e opções de lazer em Niterói e São Gonçalo.</p>
             <img src="guia.png" alt="Mockup do Guia" style="max-width: 100%; height: auto; border-radius: 10px;">
         </section>
-        
-        <section id="depoimentos">
-            <h2>O que dizem sobre o Guia</h2>
-            <p>"Excelente guia! Descobri lugares incríveis que nunca tinha ouvido falar!" - João Silva</p>
-            <p>"Recomendo demais! Perfeito para quem quer aproveitar a cidade ao máximo." - Maria Santos</p>
-            <p>"A melhor compra que fiz! Me ajudou a planejar ótimos passeios e conhecer novos restaurantes." - Carla Mendes</p>
-            <p>"Muito bem organizado e cheio de dicas valiosas. Ideal para moradores e turistas!" - Ricardo Oliveira</p>
+
+        <section id="beneficios" class="fade-in">
+            <h2>Por que escolher este Guia?</h2>
+            <p>✅ Lista dos melhores locais testados e aprovados</p>
+            <p>✅ Dicas exclusivas que você não encontra na internet</p>
+            <p>✅ Atualizações gratuitas com novos lugares</p>
         </section>
         
-        <section id="comprar">
+        <section id="depoimentos" class="fade-in">
+            <h2>O que dizem sobre o Guia</h2>
+            <p>"Excelente guia! Descobri lugares incríveis!" - João Silva</p>
+            <p>"Recomendo demais! Perfeito para aproveitar ao máximo." - Maria Santos</p>
+        </section>
+        
+        <section id="comprar" class="fade-in">
             <h2>Adquira o seu Guia</h2>
-            <p>Garanta agora o seu acesso ao guia completo por um preço especial.</p>
+            <p>Garanta agora seu acesso exclusivo.</p>
             <a href="https://app.kiwify.com.br/seu-link-de-venda" class="botao-comprar" target="_blank">Comprar Agora</a>
+        </section>
+
+        <section id="faq" class="faq fade-in">
+            <h2>Perguntas Frequentes</h2>
+            <p><strong>📌 Como recebo o Guia?</strong></p>
+            <p>Você recebe o Guia digitalmente por e-mail após a compra.</p>
+            <p><strong>📌 Ele é atualizado?</strong></p>
+            <p>Sim! Comprando agora, você recebe atualizações gratuitas.</p>
         </section>
     </div>
     
