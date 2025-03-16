@@ -60,6 +60,12 @@
             background-color: #218838;
             transform: scale(1.05);
         }
+        .contador {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            margin-top: 20px;
+        }
         .faq {
             margin-top: 40px;
             text-align: left;
@@ -100,6 +106,23 @@
             fadeElements.forEach(element => {
                 observer.observe(element);
             });
+
+            // Contador de tempo para a oferta
+            function startCountdown(duration) {
+                let timer = duration, hours, minutes, seconds;
+                setInterval(function () {
+                    hours = Math.floor(timer / 3600);
+                    minutes = Math.floor((timer % 3600) / 60);
+                    seconds = timer % 60;
+
+                    document.getElementById("contador").textContent = `${hours}h ${minutes}m ${seconds}s`;
+
+                    if (--timer < 0) {
+                        document.getElementById("contador").textContent = "Oferta Expirada";
+                    }
+                }, 1000);
+            }
+            startCountdown(3 * 3600); // Contagem regressiva de 3 horas
         });
     </script>
 </head>
@@ -119,37 +142,11 @@
     </header>
     
     <div class="container">
-        <section id="sobre" class="fade-in">
-            <h2>Sobre o Guia</h2>
-            <p>Descubra os melhores restaurantes, bares, eventos e opções de lazer em Niterói e São Gonçalo.</p>
-            <img src="guia.png" alt="Mockup do Guia" style="max-width: 100%; height: auto; border-radius: 10px;">
-        </section>
-
-        <section id="beneficios" class="fade-in">
-            <h2>Por que escolher este Guia?</h2>
-            <p>✅ Lista dos melhores locais testados e aprovados</p>
-            <p>✅ Dicas exclusivas que você não encontra na internet</p>
-            <p>✅ Atualizações gratuitas com novos lugares</p>
-        </section>
-        
-        <section id="depoimentos" class="fade-in">
-            <h2>O que dizem sobre o Guia</h2>
-            <p>"Excelente guia! Descobri lugares incríveis!" - João Silva</p>
-            <p>"Recomendo demais! Perfeito para aproveitar ao máximo." - Maria Santos</p>
-        </section>
-        
         <section id="comprar" class="fade-in">
             <h2>Adquira o seu Guia</h2>
             <p>Garanta agora seu acesso exclusivo.</p>
+            <div class="contador">Oferta termina em: <span id="contador"></span></div>
             <a href="https://app.kiwify.com.br/seu-link-de-venda" class="botao-comprar" target="_blank">Comprar Agora</a>
-        </section>
-
-        <section id="faq" class="faq fade-in">
-            <h2>Perguntas Frequentes</h2>
-            <p><strong>📌 Como recebo o Guia?</strong></p>
-            <p>Você recebe o Guia digitalmente por e-mail após a compra.</p>
-            <p><strong>📌 Ele é atualizado?</strong></p>
-            <p>Sim! Comprando agora, você recebe atualizações gratuitas.</p>
         </section>
     </div>
     
