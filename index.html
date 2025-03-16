@@ -5,6 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Completo de Lazer & Gastronomia</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #ff7f27;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .botao-comprar {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .botao-comprar:hover {
+            background-color: #218838;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #ff7f27;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,43 +80,29 @@
             </ul>
         </nav>
     </header>
-
-    <section id="sobre">
-        <h2>Sobre o Guia</h2>
-        <p>Descubra os melhores restaurantes, bares, eventos e opções de lazer em Niterói e São Gonçalo. Nosso guia foi feito para quem ama explorar novas experiências gastronômicas e culturais.</p>
-        <img src="Blue Soft Book Cover Mockup Pinterest Pin.png" alt="Mockup do Guia" style="max-width: 100%; height: auto; display: block; margin: 20px auto;">
-    </section>
-
-    <section id="depoimentos">
-        <h2>O que dizem sobre o Guia</h2>
-        <p>"Excelente guia! Descobri lugares incríveis que nunca tinha ouvido falar!" - João Silva</p>
-        <p>"Recomendo demais! Perfeito para quem quer aproveitar a cidade ao máximo." - Maria Santos</p>
-        <p>"A melhor compra que fiz! Me ajudou a planejar ótimos passeios e conhecer novos restaurantes." - Carla Mendes</p>
-        <p>"Muito bem organizado e cheio de dicas valiosas. Ideal para moradores e turistas!" - Ricardo Oliveira</p>
-    </section>
-
-    <section id="comprar">
-        <h2>Adquira o seu Guia</h2>
-        <p>Garanta agora o seu acesso ao guia completo por um preço especial.</p>
-        <a href="https://app.kiwify.com.br/seu-link-de-venda" class="botao-comprar" target="_blank">Comprar Agora</a>
-    </section>
-
-    <section id="contato">
-        <h2>Entre em Contato</h2>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
+    
+    <div class="container">
+        <section id="sobre">
+            <h2>Sobre o Guia</h2>
+            <p>Descubra os melhores restaurantes, bares, eventos e opções de lazer em Niterói e São Gonçalo. Nosso guia foi feito para quem ama explorar novas experiências gastronômicas e culturais.</p>
+            <img src="guia.png" alt="Mockup do Guia" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </section>
+        
+        <section id="depoimentos">
+            <h2>O que dizem sobre o Guia</h2>
+            <p>"Excelente guia! Descobri lugares incríveis que nunca tinha ouvido falar!" - João Silva</p>
+            <p>"Recomendo demais! Perfeito para quem quer aproveitar a cidade ao máximo." - Maria Santos</p>
+            <p>"A melhor compra que fiz! Me ajudou a planejar ótimos passeios e conhecer novos restaurantes." - Carla Mendes</p>
+            <p>"Muito bem organizado e cheio de dicas valiosas. Ideal para moradores e turistas!" - Ricardo Oliveira</p>
+        </section>
+        
+        <section id="comprar">
+            <h2>Adquira o seu Guia</h2>
+            <p>Garanta agora o seu acesso ao guia completo por um preço especial.</p>
+            <a href="https://app.kiwify.com.br/seu-link-de-venda" class="botao-comprar" target="_blank">Comprar Agora</a>
+        </section>
+    </div>
+    
     <footer>
         <p>&copy; 2025 Guia Completo de Lazer & Gastronomia. Todos os direitos reservados.</p>
     </footer>
