@@ -142,13 +142,16 @@
     <div class="container">
         <section id="sobre" class="fade-in">
             <h2>Sobre o Guia</h2>
-            <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> foi desenvolvido para oferecer uma experiência única a moradores e visitantes de Niterói e São Gonçalo.</p>
+            <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> é um guia completo e exclusivo, reunindo os melhores locais para você aproveitar o melhor de Niterói e São Gonçalo sem perder tempo pesquisando. Aqui, você encontra recomendações confiáveis e testadas.</p>
+        </section>
         </section>
         <section id="mockup" class="fade-in">
-            <img src="Mockup.png" alt="Mockup do Guia" class="mockup">
+            <img src="Mockup.png" alt="Mockup do Guia" class="mockup" style="display: block; margin: auto; max-width: 100%; height: auto;">
         </section>
+            <section id="sobre" class="fade-in">
             <h2>Sobre o Guia</h2>
-            <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> foi desenvolvido para oferecer uma experiência única a moradores e visitantes de Niterói e São Gonçalo.</p>
+            <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> é um guia completo e exclusivo, reunindo os melhores locais para você aproveitar o melhor de Niterói e São Gonçalo sem perder tempo pesquisando. Aqui, você encontra recomendações confiáveis e testadas.</p>
+        </section>
             
         </section>
         
@@ -170,7 +173,8 @@
         
         <section id="comprar" class="fade-in">
             <h2>Oferta Especial</h2>
-            <p>Oferta termina em: <span id="contador"></span></p>
+            <p>Oferta termina em: <span id="contador">15:00</span></p>
+            <p style="color: red; font-weight: bold;">Oferta por tempo limitado</p></p>
             <a href="https://pay.kiwify.com.br/NnBshQb" class="botao-comprar" target="_blank">Comprar Agora</a>
         </section>
     <section id="contato" class="fade-in">
@@ -187,5 +191,23 @@
     <footer>
         <p>&copy; 2025 Guia Completo de Lazer & Gastronomia. Todos os direitos reservados.</p>
     </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let tempoRestante = 15 * 60; // 15 minutos em segundos
+        function atualizarContador() {
+            let minutos = Math.floor(tempoRestante / 60);
+            let segundos = tempoRestante % 60;
+            segundos = segundos < 10 ? "0" + segundos : segundos;
+            document.getElementById("contador").textContent = `${minutos}:${segundos}`;
+            if (tempoRestante > 0) {
+                tempoRestante--;
+                setTimeout(atualizarContador, 1000);
+            } else {
+                document.getElementById("contador").textContent = "Oferta Expirada";
+            }
+        }
+        atualizarContador();
+    });
+</script>
 </body>
 </html>
