@@ -93,6 +93,25 @@
             color: white;
             text-align: center;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+        form input, form textarea, form button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -107,23 +126,6 @@
             fadeElements.forEach(element => {
                 observer.observe(element);
             });
-
-            // Contador de tempo para a oferta
-            function startCountdown(duration) {
-                let timer = duration, hours, minutes, seconds;
-                setInterval(function () {
-                    hours = Math.floor(timer / 3600);
-                    minutes = Math.floor((timer % 3600) / 60);
-                    seconds = timer % 60;
-
-                    document.getElementById("contador").textContent = `${hours}h ${minutes}m ${seconds}s`;
-
-                    if (--timer < 0) {
-                        document.getElementById("contador").textContent = "Oferta Expirada";
-                    }
-                }, 1000);
-            }
-            startCountdown(3 * 3600); // Contagem regressiva de 3 horas
         });
     </script>
 </head>
@@ -143,30 +145,22 @@
     </header>
     
     <div class="container">
-        <section id="sobre" class="fade-in">
-            <h2>Sobre o Guia</h2>
-            <p>Descubra os melhores restaurantes, bares, eventos e opções de lazer em Niterói e São Gonçalo.</p>
-            <img src="guia.png" alt="Mockup do Guia" style="max-width: 100%; height: auto; border-radius: 10px;">
-        </section>
-        
-        <section id="beneficios" class="fade-in">
-            <h2>Por que escolher este Guia?</h2>
-            <p>✅ Lista dos melhores locais testados e aprovados</p>
-            <p>✅ Dicas exclusivas que você não encontra na internet</p>
-            <p>✅ Ao comprar, você fará parte de um grupo exclusivo de dicas</p>
-        </section>
-        
         <section id="depoimentos" class="fade-in">
             <h2>O que dizem sobre o Guia</h2>
-            <p>"Excelente guia! Descobri lugares incríveis!" - João Silva</p>
-            <p>"Recomendo demais! Perfeito para aproveitar ao máximo." - Maria Santos</p>
+            <p>"Excelente guia! Descobri lugares incríveis!" - João Silva (Icaraí)</p>
+            <p>"Recomendo demais! Perfeito para aproveitar ao máximo." - Maria Santos (Centro)</p>
+            <p>"Muito útil! Agora sei onde ir no fim de semana." - Pedro Almeida (São Gonçalo)</p>
+            <p>"Ótimo para quem quer explorar novas opções de lazer!" - Ana Oliveira (Fonseca)</p>
         </section>
         
-        <section id="comprar" class="fade-in">
-            <h2>Adquira o seu Guia</h2>
-            <p>Garanta agora seu acesso exclusivo.</p>
-            <div class="contador">Oferta termina em: <span id="contador"></span></div>
-            <a href="https://app.kiwify.com.br/seu-link-de-venda" class="botao-comprar" target="_blank">Comprar Agora</a>
+        <section id="contato" class="fade-in">
+            <h2>Entre em Contato</h2>
+            <form action="https://formspree.io/f/contatodigitalseo@gmail.com" method="POST">
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="mensagem" placeholder="Escreva sua dúvida aqui" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </div>
     
