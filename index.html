@@ -67,16 +67,6 @@
             color: red;
             margin-top: 20px;
         }
-        .faq, .fade-in {
-            margin-top: 40px;
-            text-align: left;
-        }
-        .faq h2, .fade-in h2 {
-            text-align: center;
-        }
-        .faq p, .fade-in p {
-            font-weight: bold;
-        }
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -126,6 +116,21 @@
             fadeElements.forEach(element => {
                 observer.observe(element);
             });
+
+            // Contador regressivo
+            function startCountdown(duration) {
+                let timer = duration, hours, minutes, seconds;
+                setInterval(function () {
+                    hours = Math.floor(timer / 3600);
+                    minutes = Math.floor((timer % 3600) / 60);
+                    seconds = timer % 60;
+                    document.getElementById("contador").textContent = `${hours}h ${minutes}m ${seconds}s`;
+                    if (--timer < 0) {
+                        document.getElementById("contador").textContent = "Oferta Expirada";
+                    }
+                }, 1000);
+            }
+            startCountdown(3 * 3600); // 3 horas
         });
     </script>
 </head>
@@ -138,24 +143,33 @@
                 <li><a href="#beneficios">Benefícios</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
                 <li><a href="#comprar">Comprar</a></li>
-                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
     
     <div class="container">
-        <section id="depoimentos" class="fade-in">
-            <h2>O que dizem sobre o Guia</h2>
-            <p>"Excelente guia! Descobri lugares incríveis!" - João Silva (Icaraí)</p>
-            <p>"Recomendo demais! Perfeito para aproveitar ao máximo." - Maria Santos (Centro)</p>
-            <p>"Muito útil! Agora sei onde ir no fim de semana." - Pedro Almeida (São Gonçalo)</p>
-            <p>"Ótimo para quem quer explorar novas opções de lazer!" - Ana Oliveira (Fonseca)</p>
+        <section id="sobre" class="fade-in">
+            <h2>Sobre o Guia</h2>
+            <p>Descubra os melhores restaurantes, bares, eventos e opções de lazer em Niterói e São Gonçalo.</p>
+        </section>
+        
+        <section id="beneficios" class="fade-in">
+            <h2>Benefícios</h2>
+            <p>✅ Lista dos melhores locais testados e aprovados</p>
+            <p>✅ Dicas exclusivas que você não encontra na internet</p>
+            <p>✅ Acesso a um grupo exclusivo de dicas</p>
+        </section>
+        
+        <section id="comprar" class="fade-in">
+            <h2>Oferta Especial</h2>
+            <p>Oferta termina em: <span id="contador"></span></p>
+            <a href="https://app.kiwify.com.br/seu-link-de-venda" class="botao-comprar" target="_blank">Comprar Agora</a>
         </section>
         
         <section id="contato" class="fade-in">
             <h2>Entre em Contato</h2>
-            <form action="https://formspree.io/f/contatodigitalseo@gmail.com" method="POST">
+            <form action="https://formspree.io/f/moqzzjgj" method="POST">
                 <input type="text" name="nome" placeholder="Seu Nome" required>
                 <input type="email" name="email" placeholder="Seu E-mail" required>
                 <textarea name="mensagem" placeholder="Escreva sua dúvida aqui" required></textarea>
