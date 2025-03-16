@@ -116,21 +116,6 @@
             fadeElements.forEach(element => {
                 observer.observe(element);
             });
-
-            // Contador regressivo
-            function startCountdown(duration) {
-                let timer = duration, hours, minutes, seconds;
-                setInterval(function () {
-                    hours = Math.floor(timer / 3600);
-                    minutes = Math.floor((timer % 3600) / 60);
-                    seconds = timer % 60;
-                    document.getElementById("contador").textContent = `${hours}h ${minutes}m ${seconds}s`;
-                    if (--timer < 0) {
-                        document.getElementById("contador").textContent = "Oferta Expirada";
-                    }
-                }, 1000);
-            }
-            startCountdown(3 * 3600); // 3 horas
         });
     </script>
 </head>
@@ -151,7 +136,7 @@
     <div class="container">
         <section id="sobre" class="fade-in">
             <h2>Sobre o Guia</h2>
-            <p>Descubra os melhores restaurantes, bares, eventos e opções de lazer em Niterói e São Gonçalo.</p>
+            <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> foi criado para ajudar você a encontrar os melhores restaurantes, bares e opções de lazer em Niterói e São Gonçalo. Nossa equipe percorreu os principais pontos das cidades para selecionar experiências incríveis, garantindo que você tenha acesso a locais diferenciados e exclusivos.</p>
         </section>
         
         <section id="beneficios" class="fade-in">
@@ -159,6 +144,14 @@
             <p>✅ Lista dos melhores locais testados e aprovados</p>
             <p>✅ Dicas exclusivas que você não encontra na internet</p>
             <p>✅ Acesso a um grupo exclusivo de dicas</p>
+        </section>
+        
+        <section id="depoimentos" class="fade-in">
+            <h2>O que dizem sobre o Guia</h2>
+            <p>"Encontrei lugares incríveis que eu nem imaginava!" - João Silva (Icaraí)</p>
+            <p>"Ótima curadoria, tudo muito bem selecionado." - Maria Santos (São Francisco)</p>
+            <p>"Agora sei onde levar meus amigos nos finais de semana!" - Carlos Almeida (Centro de SG)</p>
+            <p>"Vale cada centavo! Recomendo para todos." - Ana Oliveira (Fonseca)</p>
         </section>
         
         <section id="comprar" class="fade-in">
