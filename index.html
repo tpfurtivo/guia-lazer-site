@@ -102,6 +102,12 @@
             border: none;
             cursor: pointer;
         }
+        .mockup {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -136,7 +142,8 @@
     <div class="container">
         <section id="sobre" class="fade-in">
             <h2>Sobre o Guia</h2>
-            <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> foi desenvolvido para oferecer uma experiência única a moradores e visitantes de Niterói e São Gonçalo. Com curadoria especializada, selecionamos os melhores restaurantes, bares, cafés e opções de lazer, garantindo que você aproveite cada momento da melhor forma possível.</p>
+            <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> foi desenvolvido para oferecer uma experiência única a moradores e visitantes de Niterói e São Gonçalo.</p>
+            <img src="mockup.png" alt="Mockup do Guia" class="mockup">
         </section>
         
         <section id="beneficios" class="fade-in">
@@ -145,7 +152,6 @@
             <p>📍 <strong>Dicas Secretas:</strong> Descubra lugares incríveis que não estão nos guias tradicionais.</p>
             <p>💬 <strong>Comunidade VIP:</strong> Acesso a um grupo exclusivo para trocar experiências e novas recomendações.</p>
             <p>⏳ <strong>Economize Tempo:</strong> Com o guia, você terá todas as informações prontas, sem precisar perder horas pesquisando onde ir.</p>
-            <p></p>
         </section>
         
         <section id="depoimentos" class="fade-in">
@@ -160,16 +166,6 @@
             <h2>Oferta Especial</h2>
             <p>Oferta termina em: <span id="contador"></span></p>
             <a href="https://pay.kiwify.com.br/NnBshQb" class="botao-comprar" target="_blank">Comprar Agora</a>
-        </section>
-        
-        <section id="contato" class="fade-in">
-            <h2>Entre em Contato</h2>
-            <form action="https://formspree.io/f/myzezjvr" method="POST">
-                <input type="text" name="nome" placeholder="Seu Nome" required>
-                <input type="email" name="email" placeholder="Seu E-mail" required>
-                <textarea name="mensagem" placeholder="Escreva sua dúvida aqui" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
         </section>
     </div>
     
