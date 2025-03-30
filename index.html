@@ -23,7 +23,6 @@
     form input, form textarea { padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #e0bfa0; background: #fffaf5; }
     form button { background: #d97706; color: white; border: none; padding: 0.75rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; }
     footer { background: #fbe8d3; padding: 1rem; text-align: center; font-size: 0.875rem; color: #7c3e0d; margin-top: 3rem; }
-
     .depoimentos-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -43,13 +42,8 @@
       padding: 3rem 1rem;
       text-align: center;
     }
-    .pagamento-seguro h3 {
-      color: #7c3e0d;
-      margin-top: 1rem;
-    }
-    .pagamento-seguro p {
-      color: #5c3a1e;
-    }
+    .pagamento-seguro h3 { color: #7c3e0d; margin-top: 1rem; }
+    .pagamento-seguro p { color: #5c3a1e; }
     .pagamento-grid {
       max-width: 960px;
       margin: 0 auto;
@@ -66,6 +60,56 @@
   </style>
 </head>
 <body>
-<!-- o conteúdo do site permanece aqui... -->
-</body>
-</html>
+  <header>
+    <h1>Guia Completo de Lazer & Gastronomia: Niterói e São Gonçalo</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#comprar">Comprar</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="vsl">
+      <video class="video-vsl" controls>
+        <source src="https://raw.githubusercontent.com/tpfurtivo/guia-lazer-site/main/VSL.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre o Guia</h2>
+      <p style="font-size: 1.25rem; font-weight: 600; max-width: 700px; margin: 1rem auto;">
+        Descubra os melhores lugares para curtir, comer e viver experiências únicas em Niterói e São Gonçalo — tudo em um só lugar.
+      </p>
+    </section>
+
+    <section id="mockup">
+      <h2>Veja o Guia</h2>
+      <img src="guia.png" alt="Guia Completo de Lazer" style="max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border-radius: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); background-color: #ffffff; padding: 1rem;" />
+    </section>
+
+    <section id="beneficios">
+      <h2>Benefícios</h2>
+      <p>🎯 <strong>Seleção Exclusiva:</strong> Apenas os melhores locais testados e aprovados.</p>
+      <p>📍 <strong>Dicas Secretas:</strong> Descubra lugares incríveis que não estão nos guias tradicionais.</p>
+      <p>💬 <strong>Comunidade VIP:</strong> Acesso a um grupo exclusivo para trocar experiências e novas recomendações.</p>
+      <p>⏳ <strong>Economize Tempo:</strong> Todas as informações prontas, sem precisar perder horas pesquisando onde ir.</p>
+      <p>💡 <strong>Infoproduto Digital:</strong> Você receberá o acesso ao guia diretamente no seu e-mail após o pagamento.</p>
+      <p>📧 <strong>Entrega Imediata:</strong> 100% online. Comece a explorar agora mesmo!</p>
+    </section>
+
+    <section id="depoimentos">
+      <h2>O que dizem sobre o Guia</h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento">
+          <p><strong>"Me ajudou a explorar a cidade de um jeito novo."</strong></p>
+          <p>Agora meus passeios de fim de semana são muito mais divertidos.</p>
+          <p><strong>Camila Ribeiro</strong><br><small>Estudante – Niterói/RJ</small></p>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Vale muito
