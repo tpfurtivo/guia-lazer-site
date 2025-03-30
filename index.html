@@ -6,7 +6,7 @@
   <title>Guia Completo de Lazer & Gastronomia</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body { background-color: #fbf0e4; color: #4b2e1e; line-height: 1.6; }
     header { background: #fbe8d3; padding: 2rem 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
     header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #7c3e0d; }
@@ -57,7 +57,24 @@
       height: auto;
       margin-bottom: 0.5rem;
     }
-  </style>
+  
+    .alerta-flash {
+      background-color: #dc2626;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      animation: piscar 1s infinite;
+      border-radius: 0.5rem;
+      margin: 2rem 0;
+    }
+
+    @keyframes piscar {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+</style>
     .alerta-flash {
       background-color: #dc2626;
       color: #fff;
