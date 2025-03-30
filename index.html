@@ -157,9 +157,30 @@
   </div>
 </section>
 
-    
-      <div class="alerta-flash">⏰ Não perca essa chance única! Garanta já o seu acesso!</div>
-      <a href="https://pay.kiwify.com.br/NnBshQb" class="botao-comprar" target="_blank">Comprar Agora</a>
+<section id="comprar" style="text-align: center;">
+  <div class="alerta-flash" style="margin-top: 2rem;">⚠️ NÃO PERCA TEMPO, GARANTA JÁ O SEU. CLIQUE EM COMPRAR!</div>
+  <div class="contador" id="contador" style="font-size: 28px; color: red; font-weight: bold; margin-top: 10px;">15:00</div>
+  <h2 style="margin-top: 2rem;">Oferta Especial</h2>
+  <p class="info-pagamento">Por apenas R$22,00 em até 3 vezes</p>
+  <a href="https://pay.kiwify.com.br/NnBshQb" class="botao-comprar" target="_blank">Comprar Agora</a>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let tempo = 15 * 60;
+    function atualizarContador() {
+      const minutos = Math.floor(tempo / 60);
+      const segundos = tempo % 60;
+      const formatado = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+      document.getElementById("contador").textContent = formatado;
+      if (tempo > 0) {
+        tempo--;
+        setTimeout(atualizarContador, 1000);
+      }
+    }
+    atualizarContador();
+  });
+</script>
     </section>
 
     <section class="pagamento-seguro">
