@@ -46,6 +46,30 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0.4; }
     }
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .depoimento {
+      background: #f3f4f6;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+    .depoimento img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+    .depoimento-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -76,11 +100,51 @@
       </p>
     </section>
 
-    <!-- Depoimentos já existentes -->
     <section id="depoimentos">
       <h2 style="text-align:center; font-size: 1.75rem; color: #7c3e0d; margin-bottom: 2rem;">O que dizem sobre o Guia</h2>
       <div class="depoimentos-grid">
-        <!-- seis depoimentos aqui (mantidos) -->
+        <div class="depoimento">
+          <p><strong>"Descobri bares que viraram meus preferidos."</strong><br>Economizei tempo e ainda fui em lugares incríveis que eu nem conhecia.</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/50?img=10" alt="">
+            <div><strong>André Costa</strong><br><small>Engenheiro – Icaraí/RJ</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Guia sensacional para finais de semana."</strong><br>Usei para montar roteiros rápidos com amigos. Deu super certo!</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/50?img=20" alt="">
+            <div><strong>Juliana Tavares</strong><br><small>Designer – Centro de SG</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Comida boa e sem erro!"</strong><br>Todos os restaurantes que fui estavam aprovados mesmo. Muito bem selecionado.</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/50?img=5" alt="">
+            <div><strong>Paulo Henrique</strong><br><small>Advogado – São Francisco/RJ</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Vale cada centavo."</strong><br>Fiquei impressionada com a curadoria e a entrega imediata. Super prático!</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/50?img=17" alt="">
+            <div><strong>Renata Silva</strong><br><small>Professora – Fonseca/RJ</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Ótimo para quem quer explorar mais a cidade."</strong><br>Descobri cafés, pizzarias e rolês que estavam fora do meu radar.</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/50?img=8" alt="">
+            <div><strong>Gabriel Mota</strong><br><small>Estudante – Barreto/RJ</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Presenteei minha irmã e ela amou."</strong><br>É um guia que realmente surpreende. A identidade visual é linda!</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/50?img=36" alt="">
+            <div><strong>Aline Moreira</strong><br><small>Arquiteta – Niterói/RJ</small></div>
+          </div>
+        </div>
       </div>
     </section>
 
