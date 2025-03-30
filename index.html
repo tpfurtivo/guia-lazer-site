@@ -32,7 +32,8 @@
       font-size: 1.2rem;
       animation: piscar 1s infinite;
       border-radius: 0.5rem;
-      margin: 2rem 0;
+      margin: 2rem auto;
+      max-width: 600px;
     }
     .contador {
       font-size: 32px;
@@ -70,6 +71,35 @@
       gap: 0.75rem;
       margin-top: 1rem;
     }
+    .pagamento-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .pagamento-grid div {
+      max-width: 280px;
+      background: #fffaf5;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .pagamento-grid img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+    .mockup {
+      max-width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+      background-color: #fff;
+      padding: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -85,9 +115,10 @@
       </ul>
     </nav>
   </header>
+
   <main class="container">
     <section id="vsl">
-      <video class="video-vsl" controls autoplay muted loop>
+      <video class="video-vsl" controls>
         <source src="https://raw.githubusercontent.com/tpfurtivo/guia-lazer-site/main/VSL.mp4" type="video/mp4">
         Seu navegador não suporta o vídeo.
       </video>
@@ -95,82 +126,116 @@
 
     <section id="sobre">
       <h2>Sobre o Guia</h2>
-      <p style="font-size: 1.25rem; font-weight: 600; max-width: 700px; margin: 1rem auto;">
-        Uma curadoria especial com os melhores bares, restaurantes, rolês e experiências que só quem conhece a região pode indicar. Conheça o melhor de Niterói e São Gonçalo com praticidade e aproveitamento total do seu tempo livre.
+      <p style="font-size: 1.2rem; max-width: 700px; margin: 1rem auto; font-weight: 500;">
+        Conheça os melhores destinos gastronômicos, bares, cafés e opções de lazer em Niterói e São Gonçalo — tudo cuidadosamente selecionado em um único guia digital e exclusivo.
       </p>
     </section>
 
-    <section id="depoimentos">
-      <h2 style="text-align:center; font-size: 1.75rem; color: #7c3e0d; margin-bottom: 2rem;">O que dizem sobre o Guia</h2>
-      <div class="depoimentos-grid">
-        <div class="depoimento">
-          <p><strong>"Descobri bares que viraram meus preferidos."</strong><br>Economizei tempo e ainda fui em lugares incríveis que eu nem conhecia.</p>
-          <div class="depoimento-info">
-            <img src="https://i.pravatar.cc/50?img=10" alt="">
-            <div><strong>André Costa</strong><br><small>Engenheiro – Icaraí/RJ</small></div>
-          </div>
-        </div>
-        <div class="depoimento">
-          <p><strong>"Guia sensacional para finais de semana."</strong><br>Usei para montar roteiros rápidos com amigos. Deu super certo!</p>
-          <div class="depoimento-info">
-            <img src="https://i.pravatar.cc/50?img=20" alt="">
-            <div><strong>Juliana Tavares</strong><br><small>Designer – Centro de SG</small></div>
-          </div>
-        </div>
-        <div class="depoimento">
-          <p><strong>"Comida boa e sem erro!"</strong><br>Todos os restaurantes que fui estavam aprovados mesmo. Muito bem selecionado.</p>
-          <div class="depoimento-info">
-            <img src="https://i.pravatar.cc/50?img=5" alt="">
-            <div><strong>Paulo Henrique</strong><br><small>Advogado – São Francisco/RJ</small></div>
-          </div>
-        </div>
-        <div class="depoimento">
-          <p><strong>"Vale cada centavo."</strong><br>Fiquei impressionada com a curadoria e a entrega imediata. Super prático!</p>
-          <div class="depoimento-info">
-            <img src="https://i.pravatar.cc/50?img=17" alt="">
-            <div><strong>Renata Silva</strong><br><small>Professora – Fonseca/RJ</small></div>
-          </div>
-        </div>
-        <div class="depoimento">
-          <p><strong>"Ótimo para quem quer explorar mais a cidade."</strong><br>Descobri cafés, pizzarias e rolês que estavam fora do meu radar.</p>
-          <div class="depoimento-info">
-            <img src="https://i.pravatar.cc/50?img=8" alt="">
-            <div><strong>Gabriel Mota</strong><br><small>Estudante – Barreto/RJ</small></div>
-          </div>
-        </div>
-        <div class="depoimento">
-          <p><strong>"Presenteei minha irmã e ela amou."</strong><br>É um guia que realmente surpreende. A identidade visual é linda!</p>
-          <div class="depoimento-info">
-            <img src="https://i.pravatar.cc/50?img=36" alt="">
-            <div><strong>Aline Moreira</strong><br><small>Arquiteta – Niterói/RJ</small></div>
-          </div>
-        </div>
-      </div>
+    <section id="mockup">
+      <h2>Veja o Guia</h2>
+      <img src="guia.png" alt="Guia Completo de Lazer" class="mockup" />
     </section>
 
+    <section id="beneficios">
+      <h2>Benefícios</h2>
+      <p>🎯 <strong>Seleção Exclusiva:</strong> Apenas os melhores locais testados e aprovados.</p>
+      <p>📍 <strong>Dicas Secretas:</strong> Descubra lugares incríveis que não estão nos guias tradicionais.</p>
+      <p>💬 <strong>Comunidade VIP:</strong> Acesso a um grupo exclusivo para trocar experiências e novas recomendações.</p>
+      <p>⏳ <strong>Economize Tempo:</strong> Todas as informações prontas, sem precisar perder horas pesquisando onde ir.</p>
+      <p>💡 <strong>Infoproduto Digital:</strong> Você receberá o acesso ao guia diretamente no seu e-mail após o pagamento.</p>
+      <p>📧 <strong>Entrega Imediata:</strong> 100% online. Comece a explorar agora mesmo!</p>
+    </section>
+
+    <section class="alerta-flash">⚠️ NÃO PERCA TEMPO, GARANTA JÁ O SEU. CLIQUE EM COMPRAR!</section>
+    <div class="contador" id="contador">15:00</div>
+
     <section id="comprar">
-      <div class="alerta-flash">⚠️ NÃO PERCA TEMPO, GARANTA JÁ O SEU. CLIQUE EM COMPRAR!</div>
-      <div class="contador" id="contador">15:00</div>
       <h2>Oferta Especial</h2>
       <p class="info-pagamento">Por apenas R$22,00 em até 3 vezes</p>
       <a href="https://pay.kiwify.com.br/NnBshQb" class="botao-comprar" target="_blank">Comprar Agora</a>
     </section>
 
-    <section id="pagamento-seguro" class="pagamento-seguro">
+    <section id="depoimentos">
+      <h2>O que dizem sobre o Guia</h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento">
+          <p><strong>"Encontrei lugares incríveis para sair com a família."</strong></p>
+          <p>Graças ao guia, conhecemos lugares maravilhosos que nem sabíamos que existiam.</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/40?img=31" alt="avatar">
+            <div>
+              <strong>Ana Oliveira</strong><br><small>Professora – Fonseca</small>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Prático e direto ao ponto!"</strong></p>
+          <p>Economizei muito tempo planejando os rolês com meus amigos.</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/40?img=5" alt="avatar">
+            <div>
+              <strong>Lucas Mendes</strong><br><small>Estudante – São Gonçalo</small>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Vale cada centavo!"</strong></p>
+          <p>Melhor investimento para quem ama sair e curtir sem estresse.</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/40?img=12" alt="avatar">
+            <div>
+              <strong>Camila Ribeiro</strong><br><small>Publicitária – Icaraí</small>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Melhor guia da região!"</strong></p>
+          <p>Descobri lugares incríveis que estavam escondidos.</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/40?img=22" alt="avatar">
+            <div>
+              <strong>João Silva</strong><br><small>Empreendedor – Centro</small>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Guia confiável e muito bem feito."</strong></p>
+          <p>Perfeito pra quem quer sair da mesmice e explorar a cidade.</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/40?img=17" alt="avatar">
+            <div>
+              <strong>Fernanda Lima</strong><br><small>Arquiteta – Niterói</small>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Já recomendei pra todo mundo!"</strong></p>
+          <p>Facilitou muito meus finais de semana. Amei!</p>
+          <div class="depoimento-info">
+            <img src="https://i.pravatar.cc/40?img=9" alt="avatar">
+            <div>
+              <strong>Juliana Castro</strong><br><small>Designer – São Francisco</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pagamento-seguro">
       <div class="pagamento-grid">
         <div>
           <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Garantia">
-          <h3>7 Dias de Garantia</h3>
+          <h3 style="color: #15803d;">7 Dias de Garantia</h3>
           <p>Você pode pedir reembolso total dentro do prazo.</p>
         </div>
         <div>
-          <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Seguro">
-          <h3>Pagamento Seguro</h3>
+          <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Pagamento Seguro">
+          <h3 style="color: #15803d;">Pagamento Seguro</h3>
           <p>Ambiente protegido e seguro para sua compra.</p>
         </div>
         <div>
-          <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Acesso Rápido">
-          <h3>Acesso Imediato</h3>
+          <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Acesso Imediato">
+          <h3 style="color: #15803d;">Acesso Imediato</h3>
           <p>Receba tudo por e-mail logo após o pagamento.</p>
         </div>
       </div>
@@ -186,6 +251,7 @@
       </form>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Guia Completo de Lazer & Gastronomia. Todos os direitos reservados.</p>
   </footer>
