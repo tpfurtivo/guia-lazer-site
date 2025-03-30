@@ -1,227 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guia Completo de Lazer & Gastronomia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Inter', sans-serif;
-      }
-      body {
-        background-color: #f4f4f5;
-        color: #111;
-        line-height: 1.6;
-      }
-      header {
-        background: white;
-        padding: 2rem 1rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        text-align: center;
-      }
-      header h1 {
-        font-size: 1.8rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-      }
-      nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        list-style: none;
-        padding: 0;
-      }
-      nav a {
-        text-decoration: none;
-        font-weight: 600;
-        color: #444;
-      }
-      .container {
-        max-width: 960px;
-        margin: 2rem auto;
-        padding: 1rem;
-        background: white;
-        border-radius: 1rem;
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
-      }
-      section {
-        margin-bottom: 3rem;
-        text-align: center;
-      }
-      section h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .video-vsl {
-        width: 100%;
-        max-width: 800px;
-        margin: 2rem auto;
-        display: block;
-        border-radius: 1rem;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia Completo de Lazer & Gastronomia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f4f4f5;
+      color: #111;
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #444;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    }
+    section {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .video-vsl {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 1rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    .botao-comprar {
+      display: inline-block;
+      background: #16a34a;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 0.75rem;
+      margin-top: 1.5rem;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .botao-comprar:hover {
+      background: #15803d;
+      transform: scale(1.05);
+    }
+    .mockup {
+      max-width: 100%;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    form input, form textarea {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #16a34a;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    footer {
+      background: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+    .contador {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: red;
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
       .botao-comprar {
-        display: inline-block;
-        background: #16a34a;
-        color: white;
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-        font-weight: 600;
-        border-radius: 0.75rem;
-        margin-top: 1.5rem;
-        transition: 0.3s;
-        text-decoration: none;
-      }
-      .botao-comprar:hover {
-        background: #15803d;
-        transform: scale(1.05);
-      }
-      .mockup {
-        max-width: 100%;
-        border-radius: 1rem;
-        margin-top: 1rem;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        max-width: 500px;
-        margin: 0 auto;
-      }
-      form input, form textarea {
-        padding: 0.75rem;
-        border-radius: 0.5rem;
-        border: 1px solid #ccc;
-      }
-      form button {
-        background: #16a34a;
-        color: white;
-        border: none;
-        padding: 0.75rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-        cursor: pointer;
-      }
-      footer {
-        background: white;
-        padding: 1rem;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        width: 90%;
         text-align: center;
-        font-size: 0.875rem;
-        color: #666;
-        margin-top: 3rem;
       }
-      .contador {
-        font-size: 1.25rem;
-        font-weight: bold;
-        color: red;
-        margin-top: 1rem;
-      }
-      @media (max-width: 768px) {
-        .botao-comprar {
-          position: fixed;
-          bottom: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 999;
-          width: 90%;
-          text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guia Completo de Lazer & Gastronomia: Niterói e São Gonçalo</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#comprar">Comprar</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="vsl">
+      <video class="video-vsl" controls>
+        <source src="https://raw.githubusercontent.com/tpfurtivo/guia-lazer-site/main/VSL.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre o Guia</h2>
+      <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> é um guia exclusivo que reúne os melhores locais para você aproveitar Niterói e São Gonçalo sem perder tempo pesquisando. Aqui, você encontra recomendações confiáveis e testadas.</p>
+    </section>
+
+    <section id="mockup">
+      <h2>Veja o Guia</h2>
+      <img src="guia.png" alt="Guia Completo de Lazer" class="mockup" />
+    </section>
+
+    <section id="beneficios">
+      <h2>Benefícios</h2>
+      <p>🎯 <strong>Seleção Exclusiva:</strong> Apenas os melhores locais testados e aprovados.</p>
+      <p>📍 <strong>Dicas Secretas:</strong> Descubra lugares incríveis que não estão nos guias tradicionais.</p>
+      <p>💬 <strong>Comunidade VIP:</strong> Acesso a um grupo exclusivo para trocar experiências e novas recomendações.</p>
+      <p>⏳ <strong>Economize Tempo:</strong> Com o guia, você terá todas as informações prontas, sem precisar perder horas pesquisando onde ir.</p>
+    </section>
+
+    <section id="depoimentos">
+      <h2>O que dizem sobre o Guia</h2>
+      <p>"Encontrei lugares incríveis que eu nem imaginava!" - João Silva (Icaraí)</p>
+      <p>"Ótima curadoria, tudo muito bem selecionado." - Maria Santos (São Francisco)</p>
+      <p>"Agora sei onde levar meus amigos nos finais de semana!" - Carlos Almeida (Centro de SG)</p>
+      <p>"Vale cada centavo! Recomendo para todos." - Ana Oliveira (Fonseca)</p>
+    </section>
+
+    <section id="comprar">
+      <h2>Oferta Especial</h2>
+      <p>Oferta termina em: <span id="contador">15:00</span></p>
+      <p style="color: red; font-weight: bold">Oferta por tempo limitado</p>
+      <a href="https://pay.kiwify.com.br/NnBshQb" class="botao-comprar" target="_blank">Comprar Agora</a>
+    </section>
+
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <form action="https://formspree.io/f/myzezjvr" method="POST">
+        <input type="text" name="nome" placeholder="Seu Nome" required />
+        <input type="email" name="email" placeholder="Seu E-mail" required />
+        <textarea name="mensagem" placeholder="Escreva sua dúvida aqui" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Guia Completo de Lazer & Gastronomia. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let tempoRestante = 15 * 60;
+      function atualizarContador() {
+        let minutos = Math.floor(tempoRestante / 60);
+        let segundos = tempoRestante % 60;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+        document.getElementById("contador").textContent = `${minutos}:${segundos}`;
+        if (tempoRestante > 0) {
+          tempoRestante--;
+          setTimeout(atualizarContador, 1000);
+        } else {
+          document.getElementById("contador").textContent = "Oferta Expirada";
         }
       }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Guia Completo de Lazer & Gastronomia: Niterói e São Gonçalo</h1>
-      <nav>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#beneficios">Benefícios</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#comprar">Comprar</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="container">
-      <section id="vsl">
-        <video class="video-vsl" autoplay muted playsinline>
-          <source src="https://raw.githubusercontent.com/tpfurtivo/guia-lazer-site/main/VSL.mp4" type="video/mp4">
-          Seu navegador não suporta o vídeo.
-        </video>
-      </section>
-
-      <section id="sobre">
-        <h2>Sobre o Guia</h2>
-        <p>O <strong>Guia Completo de Lazer & Gastronomia</strong> é um guia exclusivo que reúne os melhores locais para você aproveitar Niterói e São Gonçalo sem perder tempo pesquisando. Aqui, você encontra recomendações confiáveis e testadas.</p>
-      </section>
-
-      <section id="mockup">
-        <h2>Veja o Guia</h2>
-        <img src="guia.png" alt="Guia Completo de Lazer" class="mockup" />
-      </section>
-
-      <section id="beneficios">
-        <h2>Benefícios</h2>
-        <p>🎯 <strong>Seleção Exclusiva:</strong> Apenas os melhores locais testados e aprovados.</p>
-        <p>📍 <strong>Dicas Secretas:</strong> Descubra lugares incríveis que não estão nos guias tradicionais.</p>
-        <p>💬 <strong>Comunidade VIP:</strong> Acesso a um grupo exclusivo para trocar experiências e novas recomendações.</p>
-        <p>⏳ <strong>Economize Tempo:</strong> Com o guia, você terá todas as informações prontas, sem precisar perder horas pesquisando onde ir.</p>
-      </section>
-
-      <section id="depoimentos">
-        <h2>O que dizem sobre o Guia</h2>
-        <p>"Encontrei lugares incríveis que eu nem imaginava!" - João Silva (Icaraí)</p>
-        <p>"Ótima curadoria, tudo muito bem selecionado." - Maria Santos (São Francisco)</p>
-        <p>"Agora sei onde levar meus amigos nos finais de semana!" - Carlos Almeida (Centro de SG)</p>
-        <p>"Vale cada centavo! Recomendo para todos." - Ana Oliveira (Fonseca)</p>
-      </section>
-
-      <section id="comprar">
-        <h2>Oferta Especial</h2>
-        <p>Oferta termina em: <span id="contador">15:00</span></p>
-        <p style="color: red; font-weight: bold">Oferta por tempo limitado</p>
-        <a href="https://pay.kiwify.com.br/NnBshQb" class="botao-comprar" target="_blank">Comprar Agora</a>
-      </section>
-
-      <section id="contato">
-        <h2>Entre em Contato</h2>
-        <form action="https://formspree.io/f/myzezjvr" method="POST">
-          <input type="text" name="nome" placeholder="Seu Nome" required />
-          <input type="email" name="email" placeholder="Seu E-mail" required />
-          <textarea name="mensagem" placeholder="Escreva sua dúvida aqui" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Guia Completo de Lazer & Gastronomia. Todos os direitos reservados.</p>
-    </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let tempoRestante = 15 * 60;
-        function atualizarContador() {
-          let minutos = Math.floor(tempoRestante / 60);
-          let segundos = tempoRestante % 60;
-          segundos = segundos < 10 ? "0" + segundos : segundos;
-          document.getElementById("contador").textContent = `${minutos}:${segundos}`;
-          if (tempoRestante > 0) {
-            tempoRestante--;
-            setTimeout(atualizarContador, 1000);
-          } else {
-            document.getElementById("contador").textContent = "Oferta Expirada";
-          }
-        }
-        atualizarContador();
-      });
-    </script>
-  </body>
+      atualizarContador();
+    });
+  </script>
+</body>
 </html>
