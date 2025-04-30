@@ -1,237 +1,278 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ansiedade Sem Culpa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia Completo de Lazer & Gastronomia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f0f8f5;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    .container {
-      text-align: center;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      color: #2e7d32;
-      margin-bottom: 20px;
-    }
-    h2 {
-      color: #2e7d32;
-    }
-    p.subtitle {
-      font-size: 20px;
-      font-weight: 400;
-      color: #555;
-      line-height: 1.5;
-      max-width: 800px;
-      margin: 0 auto 40px;
-    }
-    .alerta-compra {
-      background-color: #ff9800;
-      color: #fff;
-      padding: 15px;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 8px;
-      margin: 30px 0;
-      animation: piscar 1.5s infinite;
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background-color: #fbf0e4; color: #4b2e1e; line-height: 1.6; }
+    header { background: #fbe8d3; padding: 2rem 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #7c3e0d; }
+    nav ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; list-style: none; }
+    nav a { text-decoration: none; font-weight: 600; color: #7c3e0d; }
+    .container { max-width: 960px; margin: 2rem auto; padding: 1rem; }
+    section { margin-bottom: 3rem; text-align: center; }
+    section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #7c3e0d; }
+    .video-vsl { width: 100%; max-width: 560px; height: 315px; display: block; margin: 2rem auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .info-pagamento { font-weight: bold; font-size: 1.1rem; color: #b45309; margin-top: 1rem; }
+    .botao-comprar, form button {
+      display: inline-block;
+      background: #16a34a;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 0.75rem;
+      margin-top: 1rem;
+      transition: 0.3s;
+      text-decoration: none;
+      border: none;
       cursor: pointer;
     }
-    .alerta-compra:hover {
-      background-color: #fb8c00;
-    }
-    .mockup {
-      width: 300px;
-      margin: 20px auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    video {
-      width: 100%;
-      height: 400px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin: 40px 0;
-    }
-    .beneficios, .depoimentos-grid, .selos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .beneficios li, .card-depoimento {
-      list-style: none;
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 300px;
-    }
-    .card-depoimento img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-    .botao-comprar {
-      background-color: #2e7d32;
-      color: white;
-      padding: 15px 30px;
-      font-size: 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 30px 0;
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #777;
-      padding-bottom: 40px;
-    }
-    #contador {
-      font-size: 28px;
+    .botao-comprar:hover, form button:hover { background: #15803d; transform: scale(1.05); }
+    form { display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: 0 auto; }
+    form input, form textarea { padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #e0bfa0; background: #fffaf5; }
+    footer { background: #fbe8d3; padding: 1rem; text-align: center; font-size: 0.875rem; color: #7c3e0d; margin-top: 3rem; }
+    .alerta-flash {
+      background-color: #dc2626;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
       font-weight: bold;
-      margin: 20px 0;
-      color: #d32f2f;
+      font-size: 1.2rem;
+      animation: piscar 1s infinite;
+      border-radius: 0.5rem;
+      margin: 2rem auto 1rem;
+      max-width: 600px;
+    }
+    .contador {
+      font-size: 32px;
+      color: #dc2626;
+      font-weight: bold;
+      text-align: center;
+      animation: piscar 1s infinite;
+      margin-bottom: 2rem;
     }
     @keyframes piscar {
-      0%, 100% {opacity: 1;}
-      50% {opacity: 0.5;}
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
     }
-    .botao-flutuante {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #388e3c;
-      color: white;
-      padding: 14px 24px;
-      font-size: 18px;
-      border-radius: 50px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 9999;
-      animation: piscar 1.2s infinite;
-      text-decoration: none;
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    .selos img {
-      width: 80px;
+    .depoimento {
+      background: #f3f4f6;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: left;
     }
-    .selos p {
-      margin-top: 10px;
-      font-weight: bold;
+    .depoimento img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+    .depoimento-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .pagamento-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .pagamento-grid div {
+      max-width: 280px;
+      background: #fffaf5;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .pagamento-grid img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    .mockup {
+      max-width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+      background-color: #fff;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
-<div class="container">
-
-  <h1>Transforme sua vida. Liberte-se da ansiedade sem culpa.</h1>
-  <p class="subtitle">Descubra um método acolhedor, simples e verdadeiro para reconquistar sua paz interior — mesmo se você já tentou de tudo antes.</p>
-
-  <img src="mockup.png" alt="Capa do Livro Ansiedade Sem Culpa" class="mockup">
-
-  <div class="alerta-compra" onclick="document.getElementById('comprar').scrollIntoView({ behavior: 'smooth' });">
-    ⚡ Clique abaixo e garanta sua cópia especial!
+  <header>
+    <h1>Guia Completo de Lazer & Gastronomia: Niterói e São Gonçalo</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#comprar">Comprar</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="vsl">
+      <video class="video-vsl" controls>
+        <source src="https://raw.githubusercontent.com/tpfurtivo/guia-lazer-site/main/VSL.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </section>
+    <section id="sobre">
+<section id="sobre">
+ <section id="sobre">
+  <h2>Sobre o Guia</h2>
+  <div style="font-size: 1.25rem; font-weight: 500; max-width: 800px; margin: 1.5rem auto; text-align: left; line-height: 1.8;">
+    <p>
+      Cansado de sair sempre para os mesmos lugares? O <strong>Guia Completo de Lazer & Gastronomia</strong> é a chave para redescobrir Niterói e São Gonçalo com experiências únicas, econômicas e memoráveis.
+    </p>
+    <p>
+      Tenha acesso imediato aos melhores restaurantes, bares e passeios da região — selecionados com rigor e pensados para quem quer aproveitar ao máximo sem perder tempo.
+    </p>
+    <p>
+      Torne seus fins de semana inesquecíveis com um clique.
+    </p>
   </div>
-
-  <video id="vsl-video" src="video.mp4" muted autoplay playsinline controls></video>
-
-  <h2>O que você vai encontrar no livro</h2>
-  <ul class="beneficios">
-    <li>✔️ Soluções naturais e acessíveis para lidar com a ansiedade</li>
-    <li>✔️ Técnicas simples para usar no dia a dia</li>
-    <li>✔️ Resgate da autoestima e autocompaixão</li>
-    <li>✔️ Libertação da culpa e compreensão emocional</li>
-  </ul>
-
-  <h2>O que dizem sobre o livro</h2>
-  <div class="depoimentos-grid">
-    <div class="card-depoimento">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Camila Ribeiro">
-      <h3>Camila Ribeiro</h3>
-      <p>Niterói/RJ</p>
-      <p>"A leitura foi um abraço em forma de palavras. Me senti compreendida."</p>
-    </div>
-    <div class="card-depoimento">
-      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jéssica Moura">
-      <h3>Jéssica Moura</h3>
-      <p>São Gonçalo/RJ</p>
-      <p>"Me identifiquei em cada capítulo. Agora sei que posso lidar com tudo isso."</p>
-    </div>
-    <div class="card-depoimento">
-      <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Marcos Oliveira">
-      <h3>Marcos Oliveira</h3>
-      <p>Itaipu/RJ</p>
-      <p>"O livro mudou minha forma de ver a ansiedade. Leve e profundo."</p>
-    </div>
-  </div>
-
-  <h2 style="color: #d32f2f;">Oferta Especial!</h2>
-  <p><strong style="color:green;">De R$ 67,00</strong> por apenas <strong style="color:red;">R$ 29,90</strong></p>
-  <p style="font-weight: bold; margin-bottom:20px;">✔️ 7 Dias de Garantia | ✔️ Pagamento Seguro | ✔️ Acesso Imediato</p>
-
-  <div class="selos">
-    <div>
-      <img src="https://i.imgur.com/FTU5fop.png" alt="Garantia 7 Dias">
-      <p>7 Dias de Garantia</p>
-    </div>
-    <div>
-      <img src="https://i.imgur.com/3ksyW6F.png" alt="Pagamento Seguro">
-      <p>Pagamento Seguro</p>
-    </div>
-    <div>
-      <img src="https://i.imgur.com/3wNRsJL.png" alt="Acesso Imediato">
-      <p>Acesso Imediato</p>
-    </div>
-  </div>
-
-  <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar" id="comprar">Quero garantir minha cópia!</a>
-  <div id="contador"></div>
-
-</div>
-
-<a href="#comprar" class="botao-flutuante">Comprar Agora</a>
-
-<footer>
-  <p>&copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados</p>
-</footer>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let tempo = 15 * 60;
-    function atualizarContador() {
-      const minutos = Math.floor(tempo / 60);
-      const segundos = tempo % 60;
-      const formatado = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
-      document.getElementById("contador").textContent = formatado;
-      if (tempo > 0) {
-        tempo--;
-        setTimeout(atualizarContador, 1000);
+</section>
+    </section>
+    <section id="mockup">
+      <h2>Veja o Guia</h2>
+      <img src="guia.png" alt="Guia Completo de Lazer" class="mockup" />
+    </section>
+    <section id="beneficios">
+  <h2>Benefícios</h2>
+  <p>🎯 <strong>Curadoria Exclusiva:</strong> Locais criteriosamente selecionados com base em avaliações reais e experiências positivas.</p>
+  <p>📍 <strong>Roteiros Especiais:</strong> Conheça pontos diferenciados que fogem do comum e tornam cada passeio único.</p>
+  <p>💬 <strong>Comunidade Seleta:</strong> Tenha acesso a um grupo exclusivo para troca de dicas, avaliações e sugestões atualizadas.</p>
+  <p>⏳ <strong>Praticidade Total:</strong> Elimine horas de pesquisa com informações organizadas e prontas para uso imediato.</p>
+  <p>💡 <strong>Material Digital:</strong> O guia é entregue por e-mail em formato digital, acessível de qualquer dispositivo.</p>
+  <p>📧 <strong>Disponibilização Imediata:</strong> Após a confirmação do pagamento, o conteúdo é enviado automaticamente ao seu e-mail.</p>
+</section>
+   <section class="alerta-flash">⚠️ NÃO PERCA TEMPO, GARANTA JÁ O SEU. CLIQUE EM COMPRAR!</section>
+    <div class="contador" id="contador">15:00</div>
+    <section id="comprar">
+  <h2 style="color: #16a34a;">Oferta Especial</h2>
+      <p class="info-pagamento" style="color: #16a34a; font-size: 1.5rem;">
+  Por apenas R$22,00 em até 3 vezes
+</p>
+      <a href="https://pay.kiwify.com.br/NnBshQb" class="botao-comprar" target="_blank">Comprar Agora</a>
+    </section>
+    <section id="depoimentos">
+      <h2>O que dizem sobre o Guia</h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento">
+          <p><strong>"Me ajudou a explorar a cidade de um jeito novo."</strong></p>
+          <p>Agora meus passeios de fim de semana são muito mais divertidos.</p>
+          <div class="depoimento-info">
+            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Camila Ribeiro">
+            <div><strong>Camila Ribeiro</strong><br><small>Estudante – Niterói/RJ</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Vale muito mais do que o valor cobrado!"</strong></p>
+          <p>Encontrei restaurantes incríveis com ótimo custo-benefício.</p>
+          <div class="depoimento-info">
+            <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Lucas Mendes">
+            <div><strong>Lucas Mendes</strong><br><small>Empreendedor – São Gonçalo/RJ</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Experiência transformadora."</strong></p>
+          <p>Conheci lugares que nem sabia que existiam. Recomendo demais!</p>
+          <div class="depoimento-info">
+            <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Fernanda Lima">
+            <div><strong>Fernanda Lima</strong><br><small>Professora – Itaipu/RJ</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Excelente para quem gosta de explorar."</strong></p>
+          <p>Não perco mais tempo procurando lugares. O guia já mostra tudo de forma prática.</p>
+          <div class="depoimento-info">
+            <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Rita Soares">
+            <div><strong>Rita Soares</strong><br><small>Publicitária – Fonseca/RJ</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Simples e objetivo."</strong></p>
+          <p>Facilitou muito meus rolês de fim de semana. Já indiquei pra vários amigos!</p>
+          <div class="depoimento-info">
+            <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Marcos Oliveira">
+            <div><strong>Marcos Oliveira</strong><br><small>Motorista – Centro de SG</small></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <p><strong>"Perfeito pra casais!"</strong></p>
+          <p>Encontrei vários locais românticos pra sair com meu parceiro. Salvou nossos encontros!</p>
+          <div class="depoimento-info">
+            <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Juliana Castro">
+            <div><strong>Juliana Castro</strong><br><small>Designer – São Francisco/RJ</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pagamento-seguro">
+      <div class="pagamento-grid">
+        <div>
+          <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Garantia">
+          <h3 style="color: #15803d;">7 Dias de Garantia</h3>
+          <p>Você pode pedir reembolso total dentro do prazo.</p>
+        </div>
+        <div>
+          <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Pagamento Seguro">
+          <h3 style="color: #15803d;">Pagamento Seguro</h3>
+          <p>Ambiente protegido e seguro para sua compra.</p>
+        </div>
+        <div>
+          <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Acesso Imediato">
+          <h3 style="color: #15803d;">Acesso Imediato</h3>
+          <p>Receba tudo por e-mail logo após o pagamento.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <form action="https://formspree.io/f/myzezjvr" method="POST">
+        <input type="text" name="nome" placeholder="Seu Nome" required />
+        <input type="email" name="email" placeholder="Seu E-mail" required />
+        <textarea name="mensagem" placeholder="Escreva sua dúvida aqui" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Guia Completo de Lazer & Gastronomia. Todos os direitos reservados.</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let tempo = 15 * 60;
+      function atualizarContador() {
+        const minutos = Math.floor(tempo / 60);
+        const segundos = tempo % 60;
+        const formatado = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+        document.getElementById("contador").textContent = formatado;
+        if (tempo > 0) {
+          tempo--;
+          setTimeout(atualizarContador, 1000);
+        }
       }
-    }
-    atualizarContador();
-  });
-
-  const video = document.getElementById('vsl-video');
-  document.body.addEventListener('click', function enableAudio() {
-    if (video && video.muted) {
-      video.muted = false;
-      video.play();
-      document.body.removeEventListener('click', enableAudio);
-    }
-  });
-</script>
-
+      atualizarContador();
+    });
+  </script>
 </body>
 </html>
