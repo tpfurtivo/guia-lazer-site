@@ -139,6 +139,17 @@
       line-height: 1.6;
       color: #444;
     }
+    .alerta-compra {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 20px auto;
+      width: fit-content;
+      cursor: pointer;
+      animation: piscar 1.5s infinite;
+    }
   </style>
 </head>
 <body>
@@ -149,53 +160,15 @@
 
   <img src="mockup.png" alt="Capa do Livro Ansiedade Sem Culpa" class="mockup">
 
-  <div class="alerta-compra" onclick="document.getElementById('comprar').scrollIntoView({ behavior: 'smooth' });">
-    🚨 Aproveite agora: clique e garanta seu acesso com desconto exclusivo!
-  </div>
-
-  <h2>O que você vai encontrar no livro</h2>
-  <ul class="beneficios">
-    <li>✔️ Soluções naturais e acessíveis para lidar com a ansiedade</li>
-    <li>✔️ Técnicas simples para usar no dia a dia</li>
-    <li>✔️ Resgate da autoestima e autocompaixão</li>
-    <li>✔️ Libertação da culpa e compreensão emocional</li>
-  </ul>
-
-  <div class="garantia">
-    <div class="garantia-texto">
-      <h3>Você está 100% seguro pela minha garantia!</h3>
-      <p>✔ Nossa Plataforma é <strong>100% Segura com um Sistema Avançado de Criptografia de Ponta a Ponta</strong>, garantindo assim total segurança a todos.</p>
-      <p>✔ Por estar 100% segura do incrível trabalho que realizei, darei 7 dias para você decidir se isso é para você. Se por algum motivo, você não estiver 100% satisfeito com o material, basta me enviar um e-mail e reembolsaremos cada centavo do seu pequeno investimento… Nenhuma pergunta será feita, ainda te enviarei uma nota de desculpas por ter desperdiçado seu tempo.</p>
-    </div>
-    <img src="garantia-selo.png" alt="Selo Garantia 7 Dias">
-  </div>
-
-  <div class="depoimentos-grid">
-    <div class="card-depoimento">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Camila Ribeiro">
-      <h3>Camila Ribeiro</h3>
-      <p>Niterói/RJ</p>
-      <p>"A leitura foi um abraço em forma de palavras. Me senti compreendida."</p>
-    </div>
-    <div class="card-depoimento">
-      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jéssica Moura">
-      <h3>Jéssica Moura</h3>
-      <p>São Gonçalo/RJ</p>
-      <p>"Me identifiquei em cada capítulo. Agora sei que posso lidar com tudo isso."</p>
-    </div>
-    <div class="card-depoimento">
-      <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Marcos Oliveira">
-      <h3>Marcos Oliveira</h3>
-      <p>Itaipu/RJ</p>
-      <p>"O livro mudou minha forma de ver a ansiedade. Leve e profundo."</p>
-    </div>
-  </div>
-
   <div id="contador"></div>
 
   <h2 style="color: #d32f2f;">Oferta Especial!</h2>
   <p><strong style="color:green;">De R$ 67,00</strong> por apenas <strong style="color:red;">R$ 29,90</strong></p>
   <p style="font-weight: bold; margin-bottom:20px;">✔️ 7 Dias de Garantia | ✔️ Pagamento Seguro | ✔️ Acesso Imediato</p>
+
+  <div class="alerta-compra" onclick="document.getElementById('comprar').scrollIntoView({ behavior: 'smooth' });">
+    🚨 Esta pode ser sua única chance de transformar sua vida. Clique abaixo para garantir agora!
+  </div>
 
   <div class="selos">
     <div>
@@ -213,7 +186,7 @@
   </div>
 
   <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar" id="comprar">Quero garantir minha cópia!</a>
-  </div>
+</div>
 
 <a href="#comprar" class="botao-flutuante">Comprar Agora</a>
 
